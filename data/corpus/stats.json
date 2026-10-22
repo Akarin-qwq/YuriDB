@@ -35,10 +35,10 @@
   "yuri-archive"
  ],
  "enrichment": {
-  "with_characters": 3389,
-  "with_ending_tags": 709,
-  "with_plot_tags": 1198,
-  "with_wiki_extract": 94,
+  "with_characters": 3421,
+  "with_ending_tags": 733,
+  "with_plot_tags": 1289,
+  "with_wiki_extract": 155,
   "with_description": 6001
  }
 }
