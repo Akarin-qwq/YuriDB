@@ -28,11 +28,9 @@ def vndb_enrich():
         ending, plot = [], []
         for t in tags:
             n = t["name"]
-            if t.get("category") != "cont":
-                continue
             if any(k in n.lower() for k in ENDING_KW) or "death of" in n.lower():
-                ending.append(n)
-            elif t.get("spoiler", 0) < 2:  # 剧情走向 tag 排除重度剧透
+                ending.append(n)  # 结局 tag 可能是 cont/tech 任意类
+            elif t.get("category") == "cont" and t.get("spoiler", 0) < 2:
                 plot.append(n)
         out[f"vndb:{vnid}"] = {
             "characters": chars,
@@ -68,10 +66,28 @@ def bangumi_enrich():
             out[f"bangumi:{d['subject']}"] = {"characters": chars}
     return out
 
+def archive_enrich():
+    out = {}
+    items = json.load(open(RAW / "_archive" / "data" / "catalog.json", encoding="utf-8"))["items"]
+    for it in items:
+        profiles = []
+        for p in (it.get("relationship_profiles") or []):
+            profiles.append({
+                "name": p.get("name"),
+                "position": (p.get("position") or {}).get("label"),
+                "explicitness": (p.get("explicitness") or {}).get("label"),
+                "mutuality": (p.get("mutuality") or {}).get("label"),
+            })
+        if profiles:
+            out[f"yuri-archive:{it['slug']}"] = {
+                "characters": profiles,  # 关系组档案：定位/明确度/单向双向
+            }
+    return out
+
 def main():
     lines = [json.loads(l) for l in open(CORPUS / "works.jsonl", encoding="utf-8")]
     enrich = {}
-    for src in (vndb_enrich(), anilist_enrich(), bangumi_enrich()):
+    for src in (vndb_enrich(), anilist_enrich(), bangumi_enrich(), archive_enrich()):
         enrich.update(src)
     hit = 0
     for e in lines:
@@ -79,6 +95,8 @@ def main():
         if extra:
             e.update(extra)
             hit += 1
+        if not e.get("description") and e.get("full_description"):
+            e["description"] = e["full_description"]  # 回填第一批漏抓的 VNDB 描述
     with open(CORPUS / "works.jsonl", "w", encoding="utf-8") as f:
         for e in lines:
             f.write(json.dumps(e, ensure_ascii=False) + "\n")

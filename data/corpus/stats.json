@@ -33,5 +33,11 @@
   "bangumi",
   "vndb",
   "yuri-archive"
- ]
+ ],
+ "enrichment": {
+  "with_characters": 2956,
+  "with_ending_tags": 681,
+  "with_plot_tags": 1130,
+  "with_full_description": 1077
+ }
 }
