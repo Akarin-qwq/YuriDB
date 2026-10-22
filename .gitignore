@@ -1,0 +1,9 @@
+# 原始抓取缓存不入库（体积大且可重抓）
+data/raw/*
+!data/raw/.gitkeep
+
+# 排除克隆来的参考仓库
+data/raw/_archive/
+
+__pycache__/
+*.pyc

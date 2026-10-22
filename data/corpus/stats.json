@@ -1,0 +1,34 @@
+{
+ "total": 2202,
+ "unique_ids": 2202,
+ "duplicates": 0,
+ "validation_errors": 0,
+ "by_media_type": {
+  "vn": 400,
+  "anime": 400,
+  "manga": 400,
+  "light_novel": 179,
+  "archive_tv_anime": 531,
+  "archive_anime_film": 35,
+  "archive_theatrical_movie": 44,
+  "archive_web_animation": 12,
+  "archive_theatrical_ova": 11,
+  "archive_web_anime_film": 1,
+  "archive_ova": 93,
+  "archive_music_video": 4,
+  "archive_tv_animation": 2,
+  "archive_web_anime": 27,
+  "archive_tv": 40,
+  "archive_tv_special": 5,
+  "archive_web_short_anime": 5,
+  "archive_anime_tv": 7,
+  "archive_anime_ova": 2,
+  "archive_tv_short_anime": 2,
+  "archive_tv_short": 2
+ },
+ "sources": [
+  "anilist",
+  "vndb",
+  "yuri-archive"
+ ]
+}
