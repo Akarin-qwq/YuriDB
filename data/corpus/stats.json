@@ -1,10 +1,10 @@
 {
- "total": 2882,
- "unique_ids": 2882,
+ "total": 3049,
+ "unique_ids": 2602,
  "duplicates": 0,
  "validation_errors": 0,
  "by_media_type": {
-  "vn": 963,
+  "vn": 1130,
   "anime": 445,
   "manga": 400,
   "light_novel": 179,
