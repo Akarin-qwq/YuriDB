@@ -1,11 +1,11 @@
 {
- "total": 2202,
- "unique_ids": 2202,
+ "total": 2882,
+ "unique_ids": 2882,
  "duplicates": 0,
  "validation_errors": 0,
  "by_media_type": {
-  "vn": 400,
-  "anime": 400,
+  "vn": 963,
+  "anime": 445,
   "manga": 400,
   "light_novel": 179,
   "archive_tv_anime": 531,
@@ -24,10 +24,13 @@
   "archive_anime_tv": 7,
   "archive_anime_ova": 2,
   "archive_tv_short_anime": 2,
-  "archive_tv_short": 2
+  "archive_tv_short": 2,
+  "book": 23,
+  "game": 49
  },
  "sources": [
   "anilist",
+  "bangumi",
   "vndb",
   "yuri-archive"
  ]
