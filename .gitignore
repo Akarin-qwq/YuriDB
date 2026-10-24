@@ -7,3 +7,4 @@ data/raw/_archive/
 
 __pycache__/
 *.pyc
+bgm_token.txt
