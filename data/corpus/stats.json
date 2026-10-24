@@ -1,6 +1,6 @@
 {
- "total": 14158,
- "unique_ids": 14158,
+ "total": 14270,
+ "unique_ids": 14270,
  "duplicates": 0,
  "validation_errors": 0,
  "by_media_type": {
@@ -26,7 +26,8 @@
   "archive_tv_short_anime": 2,
   "archive_tv_short": 2,
   "book": 5465,
-  "game": 1270
+  "game": 1270,
+  "cn_galgame": 112
  },
  "sources": [
   "anilist",
@@ -35,18 +36,19 @@
   "yuri-archive"
  ],
  "enrichment": {
-  "with_characters": 5596,
-  "character_entries": 48848,
+  "with_characters": 5638,
+  "character_entries": 49043,
   "with_ending_tags": 1056,
   "with_plot_tags": 2440,
   "with_wiki_extract": 988,
-  "with_description": 13267,
+  "with_description": 13378,
   "with_yuri_tag_votes": 7839
  },
  "by_source": {
   "vndb": 2440,
   "anilist": 3002,
   "yuri-archive": 823,
-  "bangumi": 7893
+  "bangumi": 7893,
+  "cngal": 112
  }
 }
