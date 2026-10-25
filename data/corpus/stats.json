@@ -36,14 +36,13 @@
   "yuri-archive"
  ],
  "enrichment": {
-  "with_characters": 5709,
-  "character_entries": 49496,
+  "with_characters": 5718,
+  "character_entries": 49872,
   "with_ending_tags": 1056,
   "with_plot_tags": 2440,
   "with_wiki_extract": 1403,
-  "with_moegirl_plot": 230,
-  "with_description": 13384,
-  "with_cn_plot_any": 9415
+  "with_moegirl_plot": 236,
+  "with_description": 13384
  },
  "by_source": {
   "vndb": 2440,
