@@ -109,5 +109,3 @@ python scripts/merge_enriched.py && python scripts/merge_extras.py
 ## 数据来源与许可
 
 各源数据版权归原站：VNDB (CC BY-NC-SA)、AniList (TOU)、Bangumi Archive (CC BY-NC-ND)、CnGal (CC BY-NC-SA)、Wikipedia (CC BY-SA)、yuri-classification-archive (见其 LICENSE)。本仓库仅作研究/语料聚合使用，请遵循各源许可。
-
-持续任务：老大说停之前持续扩充。待做：VNDB 冷门作角色补漏、CnGal STAFF/制作组子标签挖掘、MAL 补充。
